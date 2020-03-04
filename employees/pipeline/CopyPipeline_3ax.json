@@ -1,0 +1,111 @@
+{
+	"name": "CopyPipeline_3ax",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_3ax",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "api/v1/employees"
+					},
+					{
+						"name": "Destination",
+						"value": "employess//"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"Content-Type": "application/json"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['data'][0]['id']"
+								},
+								"sink": {
+									"name": "id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_name']"
+								},
+								"sink": {
+									"name": "employee_name"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_salary']"
+								},
+								"sink": {
+									"name": "employee_salary"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_age']"
+								},
+								"sink": {
+									"name": "employee_age"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['profile_image']"
+								},
+								"sink": {
+									"name": "profile_image"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_3ax",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_3ax",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
