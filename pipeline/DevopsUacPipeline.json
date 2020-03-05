@@ -25,14 +25,9 @@
 						}
 					},
 					"sink": {
-						"type": "JsonSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "JsonWriteSettings",
-							"quoteAllText": true
-						}
+						"type": "AzureTableSink",
+						"azureTableInsertType": "replace",
+						"writeBatchSize": 10000
 					},
 					"enableStaging": false
 				},
@@ -44,7 +39,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "EmployeesOutputJson",
+						"referenceName": "AzureTable1",
 						"type": "DatasetReference"
 					}
 				]
