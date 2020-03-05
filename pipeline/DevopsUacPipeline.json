@@ -34,42 +34,7 @@
 							"quoteAllText": true
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"path": "$['status']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['id']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['employee_name']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['employee_salary']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['employee_age']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['profile_image']"
-								}
-							}
-						]
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
