@@ -1,0 +1,6 @@
+{
+	"name": "TabTestUac",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
