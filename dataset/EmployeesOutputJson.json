@@ -1,0 +1,17 @@
+{
+	"name": "EmployeesOutputJson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "UacDevopsBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "employees"
+			}
+		}
+	}
+}
