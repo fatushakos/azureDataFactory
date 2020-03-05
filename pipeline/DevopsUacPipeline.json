@@ -25,11 +25,51 @@
 						}
 					},
 					"sink": {
-						"type": "AzureTableSink",
-						"azureTableInsertType": "replace",
-						"writeBatchSize": 10000
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
+						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['status']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['id']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_name']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_salary']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['employee_age']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data'][0]['profile_image']"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
@@ -39,7 +79,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureTable1",
+						"referenceName": "EmployeesOutputJson",
 						"type": "DatasetReference"
 					}
 				]
