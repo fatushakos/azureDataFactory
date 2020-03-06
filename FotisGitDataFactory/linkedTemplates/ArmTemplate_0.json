@@ -41,11 +41,11 @@
 		},
 		"StbTestUacRest_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "http://10.120.25.21:8080/opswise/"
+			"defaultValue": "http://10.100.10.6:8080/opswise/"
 		},
 		"StbTestUacRest_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "i.kyriazidou"
+			"defaultValue": "ops.admin"
 		}
 	},
 	"variables": {
@@ -205,18 +205,18 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "RestSamplesService",
+					"referenceName": "StbTestUacRest",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
 				"type": "RestResource",
 				"typeProperties": {
-					"relativeUrl": "api/v1/employees"
+					"relativeUrl": "resources/credentials/list"
 				},
 				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/RestSamplesService')]"
+				"[concat(variables('factoryId'), '/linkedServices/StbTestUacRest')]"
 			]
 		},
 		{
@@ -311,7 +311,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "EmployeesOutputJson",
+								"referenceName": "StbTestUacOutputJson",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -322,7 +322,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/RestSamples')]",
-				"[concat(variables('factoryId'), '/datasets/EmployeesOutputJson')]"
+				"[concat(variables('factoryId'), '/datasets/StbTestUacOutputJson')]"
 			]
 		},
 		{

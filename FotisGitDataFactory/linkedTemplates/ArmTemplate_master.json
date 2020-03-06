@@ -41,11 +41,11 @@
 		},
 		"StbTestUacRest_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "http://10.120.25.21:8080/opswise/"
+			"defaultValue": "http://10.100.10.6:8080/opswise/"
 		},
 		"StbTestUacRest_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "i.kyriazidou"
+			"defaultValue": "ops.admin"
 		},
 		"containerUri": {
 			"type": "string",
