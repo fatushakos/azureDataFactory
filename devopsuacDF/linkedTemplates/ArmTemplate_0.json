@@ -177,7 +177,7 @@
 				"annotations": [],
 				"type": "RestResource",
 				"typeProperties": {
-					"relativeUrl": "opswise/resources/credentials/list"
+					"relativeUrl": ""
 				},
 				"schema": []
 			},
