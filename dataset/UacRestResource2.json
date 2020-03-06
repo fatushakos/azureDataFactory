@@ -1,0 +1,15 @@
+{
+	"name": "UacRestResource2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "StbTestUacRest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "resources/credentials/list"
+		},
+		"schema": []
+	}
+}
