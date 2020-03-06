@@ -2,13 +2,13 @@
 	"name": "RestSamples",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "RestSamplesService",
+			"referenceName": "StbTestUacRest",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "api/v1/employees"
+			"relativeUrl": "resources/credentials/list"
 		},
 		"schema": []
 	}
