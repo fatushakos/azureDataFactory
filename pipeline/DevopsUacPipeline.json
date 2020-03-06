@@ -86,7 +86,7 @@
 									"httpRequestTimeout": "00:01:40",
 									"requestInterval": "00.00:00:00.010",
 									"requestMethod": "POST",
-									"requestBody": "{\n\t\"taskname\":name\n}",
+									"requestBody": "{\n\t\"taskname\":\"name\"\n}",
 									"additionalHeaders": {
 										"Content-Type": "application/json"
 									}
