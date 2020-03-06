@@ -1,5 +1,5 @@
 {
-	"name": "RestSamples",
+	"name": "UacRestResource2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "StbTestUacRest",

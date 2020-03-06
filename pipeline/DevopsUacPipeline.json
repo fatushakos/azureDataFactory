@@ -38,7 +38,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "RestSamples",
+						"referenceName": "UacRestResource2",
 						"type": "DatasetReference"
 					}
 				],
