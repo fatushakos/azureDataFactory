@@ -44,7 +44,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "EmployeesOutputJson",
+						"referenceName": "StbTestUacOutputJson",
 						"type": "DatasetReference"
 					}
 				]
