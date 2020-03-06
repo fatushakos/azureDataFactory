@@ -8,7 +8,7 @@
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "opswise/resources/tasks/list"
+			"relativeUrl": "opswise/resources/task/list"
 		},
 		"schema": []
 	}
