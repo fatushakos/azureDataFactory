@@ -2,7 +2,7 @@
 	"name": "UacRestResource2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "StbTestUacRest",
+			"referenceName": "UacRestService2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
