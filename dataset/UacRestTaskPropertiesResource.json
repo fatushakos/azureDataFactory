@@ -1,0 +1,15 @@
+{
+	"name": "UacRestTaskPropertiesResource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "UacRestService2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "opswise/resources/task"
+		},
+		"schema": []
+	}
+}
