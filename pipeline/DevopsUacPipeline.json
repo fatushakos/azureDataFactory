@@ -64,7 +64,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@nameactivity('DevopsUacCopyData').outputactivity('DevopsUacCopyData').outputactivity('DevopsUacCopyData').output",
+						"value": "@activity('DevopsUacCopyData').output",
 						"type": "Expression"
 					},
 					"activities": [
